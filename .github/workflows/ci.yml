@@ -14,9 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      FRUIT_LIMIT: ${{ secrets.FRUIT_LIMIT }}
-      VEHICLE_LIMIT: ${{ secrets.VEHICLE_LIMIT }}
-      API_VERSION: ${{ secrets.API_VERSION }}
+      API_KEY: ${{ secrets.API_KEY }}
 
     steps:
       # Checkout the code from the repository
@@ -25,9 +23,7 @@ jobs:
 
       - name: Echo Environment Variables
         run: |
-            echo "FRUIT_LIMIT: $FRUIT_LIMIT"
-            echo "VEHICLE_LIMIT: $VEHICLE_LIMIT"
-            echo "API_VERSION: $API_VERSION"
+            echo "api_key: $API_KEY"
 
       # Set up Python 3.10 (or the version you're using)
       - name: Set up Python
