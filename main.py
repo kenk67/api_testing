@@ -1,7 +1,10 @@
 from fastapi import FastAPI, HTTPException
 from models import ItemOutput
+from settings import get_settings
 
 app = FastAPI()
+
+settings = get_settings()
 
 # Fruit descriptions
 fruits_info = {
@@ -37,3 +40,11 @@ def get_vehicle_description(vehicle: str):
         return ItemOutput(name=vehicle, description=vehicles_info[vehicle_lower])
     else:
         raise HTTPException(status_code=404, detail="Vehicle not found")
+
+@app.get("/config")
+def get_config():
+    return {
+        "api_version": settings.api_version,
+        "fruit_limit": settings.fruit_limit,
+        "vehicle_limit": settings.vehicle_limit
+    }

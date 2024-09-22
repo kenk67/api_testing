@@ -4,3 +4,4 @@ httpx
 certifi
 pydantic
 pytest
+pydantic-settings

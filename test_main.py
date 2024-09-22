@@ -28,3 +28,14 @@ def test_get_vehicle_description_not_found():
     response = client.get("/vehicles?vehicle=plane")
     assert response.status_code == 404
     assert response.json() == {"detail": "Vehicle not found"}
+
+# New test to verify the /config endpoint
+def test_get_config():
+    response = client.get("/config")
+    assert response.status_code == 200
+    # These values should match the secrets set in the GitHub Actions or local .env file
+    assert response.json() == {
+        "api_version": "1.0",
+        "fruit_limit": 6,
+        "vehicle_limit": 5
+    }
