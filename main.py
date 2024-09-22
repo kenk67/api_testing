@@ -13,7 +13,7 @@ fruits_info = {
     "orange": "Oranges are citrus fruits known for their tangy and sweet flavor, packed with vitamin C.",
     "grape": "Grapes are small, juicy fruits that can be eaten fresh or used to make wine, jams, and juice.",
     "mango": "Mangoes are tropical fruits with a sweet and tangy flavor, known for their juicy, orange flesh.",
-    "watermelon": "Its freaking good"
+    "watermelon": "Its freaking good u know"
 }
 
 # Vehicle descriptions
