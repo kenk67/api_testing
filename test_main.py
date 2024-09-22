@@ -4,11 +4,11 @@ from main import app  # Replace 'main' with your FastAPI app file name if differ
 client = TestClient(app)
 
 def test_get_fruit_description_apple():
-    response = client.get("/fruits?fruit=apple")
+    response = client.get("/fruits?fruit=watermelon")
     assert response.status_code == 200
     assert response.json() == {
-        "name": "apple",
-        "description": "Apples are sweet and crunchy fruits that come in a variety of colors including red, green, and yellow."
+        "name": "watermelon",
+        "description": "Its freaking good"
     }
 
 def test_get_fruit_description_not_found():
