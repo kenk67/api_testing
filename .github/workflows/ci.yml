@@ -1,0 +1,39 @@
+name: CI Pipeline
+
+# Trigger the workflow on push to the 'main' branch or pull request to 'main'
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code from the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Python 3.10 (or the version you're using)
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      # Install dependencies from requirements.txt or pyproject.toml if using poetry
+      - name: Install dependencies
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      # Run pytest to execute the tests
+      - name: Run tests
+        run: |
+          source venv/bin/activate
+          pytest --disable-warnings
