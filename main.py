@@ -11,7 +11,7 @@ fruits_info = {
     "apple": "Apples are sweet and crunchy fruits that come in a variety of colors including red, green, and yellow.",
     "banana": "Bananas are elongated, yellow fruits that are soft and sweet when ripe.",
     "orange": "Oranges are citrus fruits known for their tangy and sweet flavor, packed with vitamin C.",
-    "grape": "Grapes are small, juicy fruits that can be eaten fresh or used to make wine, jams, and juice.",
+    "grape": "Grapes ar small, juicy fruits that can be eaten fresh or used to make wine, jams, and juice.",
     "mango": "Mangoes are tropical fruits with a sweet and tangy flavor, known for their juicy, orange flesh.",
     "watermelon": "Its freaking good"
 }
