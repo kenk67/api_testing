@@ -43,7 +43,7 @@ def get_vehicle_description(vehicle: str):
 
 @app.get("/config")
 def get_config():
-    if settings.api_key:
+    if settings.api_key == "12345":
         return {
             "api_version": "1.0",
             "fruit_limit": 6,
